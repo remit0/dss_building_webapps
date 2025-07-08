@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, isDevMode } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './app.css'
 })
 
-export class App  {
+export class App implements OnInit {
   title: String = "my-app";
   projects: String = "";
   backendUrl: string ='';
