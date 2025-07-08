@@ -17,10 +17,11 @@ export class App implements OnInit {
   constructor (private http:HttpClient){}
 
   ngOnInit() {
-    this.backendUrl = 'http://127.0.0.1:5000/get_one';
-    this.http.get<String>(this.backendUrl, { responseType: 'text' as 'json'})
-    .subscribe((resp:any) => {
-      this.projects = resp
-    });
+    //this.backendUrl = 'http://127.0.0.1:5000/get_one';
+    //this.http.get<String>(this.backendUrl, { responseType: 'text' as 'json'})
+    //.subscribe((resp:any) => {
+    //  this.projects = resp
+    //});
+    this.projects = "test"
   }
 }
